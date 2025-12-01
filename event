@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event exsmple</title>
+    <script>
+        function changeColor() {
+            document.getElementById("box").style.backgroundColor = "blue";
+        }
+        function resetColor() {
+            document.getElementById("box").style.backgroundColor = "red";
+        }
+        function showMessage() {
+            let value = document.getElementById("myselect").value;
+            document.getElementById("output").innerHTML = "You selected: " + value;
+        }
+    </script>
+</head>
+<body>
+    <h2>Mouse Events</h2>
+    <div id="box" 
+        style="width:200px; height:200px; background-color:red;" 
+        onmouseover="changeColor()" 
+        onmouseout="resetColor()">
+    </div>
+
+    <h2>Change Event</h2>
+    <select id="myselect" onchange="showMessage()">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="output"></p>
+</body>
+</html>
